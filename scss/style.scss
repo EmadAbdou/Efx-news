@@ -2,12 +2,266 @@
 $light-color: #569d03;
 $dark-color: #1a2616;
 $background-color: #fffde8;
+
 //// Importing Cairo font \\\\
 @font-face {
     font-family: 'Cairo';
     src: url("/webfonts/Cairo-Regular.ttf");
 }
 
-body{
-    font-family: 'Cairo';
+//// Styling user buttons \\\\
+%user-button {
+    width: 120px;
+    color: $dark-color;
+    background-color: white;
+}
+
+body {
+    font-family: 'Cairo', 'Sans';
+
+    nav {
+        padding: 0 !important;
+        background-color: green;
+
+        .user-part {
+            text-align: center;
+            padding: 1%;
+
+            p {
+                font-size: 13px;
+            }
+
+            .modals {
+                .login-modal {
+                    display: inline-block;
+
+                    .login-button {
+                        @extend %user-button;
+                    }
+
+                    .modal {
+                        .modal-content {
+                            .modal-body {
+                                .password-part {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+
+                        .modal-footer {
+                            justify-content: right;
+
+                            button {
+                                width: 25%;
+                            }
+                        }
+                    }
+                }
+
+                .signup-modal {
+                    display: inline-block;
+
+                    .signup-button {
+                        @extend %user-button;
+                    }
+
+                    .modal-body {
+                        .form-check {
+                            float: right;
+                        }
+                    }
+
+                    .modal-footer {
+                        justify-content: right;
+
+                        button {
+                            width: 25%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .side-menu {
+        background-color: $light-color;
+        height: 80vh;
+        padding: 0 !important;
+        position: absolute;
+        z-index: 2;
+
+        .list-group {
+            color: $dark-color;
+
+            a {
+                background-color: transparent;
+                width: 100%;
+                padding: 3%;
+                color: $dark-color;
+
+                i {
+                    padding-left: 5%;
+                }
+
+                span {
+                    float: left;
+                    border: 1px solid $dark-color;
+                    padding: .5% 1%;
+                    border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -ms-border-radius: 3px;
+                    -o-border-radius: 3px;
+                }
+
+                &:hover {
+                    color: white;
+                    border-bottom: 1px solid white;
+                    transition: all .5s ease-in-out;
+                    -webkit-transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+                    -ms-transition: all .5s ease-in-out;
+                    -o-transition: all .5s ease-in-out;
+
+                    span {
+                        border: 1px solid white;
+                        transition: all .5s ease-in-out;
+                        -webkit-transition: all .5s ease-in-out;
+                        -moz-transition: all .5s ease-in-out;
+                        -ms-transition: all .5s ease-in-out;
+                        -o-transition: all .5s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        p {
+            padding: 8% 8% 0% 0%;
+            color: white;
+            font-size: 13px;
+        }
+
+        .links {
+            text-align: center;
+            padding-top: 2%;
+
+            span {
+                text-decoration: none;
+                background-color: white !important;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
+
+                .social {
+                    i {
+                        width: 30px;
+                        height: 20px;
+                        text-align: center;
+                        color: $light-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        background-color: $background-color;
+        padding: 1%;
+        text-align: center;
+        margin-right: (100% / 12)*2;
+        .banner {
+            border-bottom: 2px solid $dark-color;
+
+            p,
+            a {
+                word-spacing: 3px;
+                text-align: center;
+                display: inline-block;
+                color: $dark-color;
+            }
+
+            a {
+                text-decoration-line: underline;
+                -moz-text-decoration-line: underline;
+            }
+        }
+
+        .buttons-group1,
+        .buttons-group2 {
+            padding-top: 1%;
+            padding-bottom: .5%;
+
+            .button {
+                text-decoration: none;
+                color: $light-color;
+                font-weight: bold;
+                font-size: 13px;
+                padding: .1% 2%;
+                margin-left: 1%;
+                outline: 0;
+                background-color: transparent;
+                border: 1px solid $light-color;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+
+                &:hover,
+                &:focus {
+                    color: white;
+                    background-color: $light-color;
+                }
+            }
+        }
+
+        .news{
+            height: 260px;
+            overflow-y: scroll;
+            text-align: right;
+            padding-top: 1.5%;
+            a{
+                background-color: transparent;
+                box-sizing: border-box;
+                padding: .3% 1%;
+                border-right: none;
+                border-left: none;
+                span{
+                    display: inline-block;
+                }
+                .type{
+                    color: $light-color;
+                }
+                p{
+                    display: inline-block;
+                    color: $dark-color;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+    }
+
+    footer{
+        position: absolute;
+        z-index: 1;
+        background-color: $dark-color;
+        width: 100%;
+        bottom: 0%;
+        padding-top: .3%;
+        padding-right: (100% / 5)*1;
+        font-size: 12px;
+        div{
+            display: inline-block;
+            width: (100% / 5);
+            color: white;
+            h6{
+                font-size: 15px !important;
+            }
+        }
+        .group4{
+            text-align: left;
+        }
+    }
 }
