@@ -1,0 +1,13 @@
+//// Variables \\\\
+$light-color: #569d03;
+$dark-color: #1a2616;
+$background-color: #fffde8;
+//// Importing Cairo font \\\\
+@font-face {
+    font-family: 'Cairo';
+    src: url("/webfonts/Cairo-Regular.ttf");
+}
+
+body{
+    font-family: 'Cairo';
+}
