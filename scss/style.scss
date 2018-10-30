@@ -132,6 +132,7 @@ body {
         }
     }
     .side-menu-button {
+        position: absolute;
         @media($large-max-width) {
             display: none;
         }

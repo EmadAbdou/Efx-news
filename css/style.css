@@ -115,6 +115,9 @@ body nav .user-part .modals .signup-modal .modal-footer .cancel-btn {
   color: white;
   background-image: url(/images/light-menu-button-background.png);
 }
+body .side-menu-button {
+  position: absolute;
+}
 @media (max-width : 1024px) {
   body .side-menu-button {
     display: none;
