@@ -130,6 +130,7 @@ body .side-menu-button {
 }
 @media (max-width : 576px) {
   body .side-menu-button {
+    position: inherit;
     display: block;
     outline: 0;
     border: 0;
@@ -438,24 +439,32 @@ body footer .group4 {
   z-index: 1 !important;
 }
 
+body .container-fluid .orders-content {
+  background-color: #fffce8;
+  padding: 1%;
+  text-align: center;
+  height: 70vh;
+  justify-content: center;
+  margin-right: 16.6666666667%;
+}
 @media (max-width : 768px) {
-  body .container-fluid .content {
+  body .container-fluid .orders-content {
     margin-right: 33.3333333333%;
   }
 }
 @media (max-width : 576px) {
-  body .container-fluid .content {
+  body .container-fluid .orders-content {
     margin-right: 0;
-    height: 120vh;
+    height: 115vh;
   }
 }
-body .container-fluid .content .content-header h5 {
+body .container-fluid .orders-content .content-header h5 {
   color: #20351a;
 }
-body .container-fluid .content .content-header hr {
+body .container-fluid .orders-content .content-header hr {
   width: 10%;
 }
-body .container-fluid .content .content-header button {
+body .container-fluid .orders-content .content-header button {
   border: 0;
   outline: 0;
   color: white;
@@ -464,10 +473,10 @@ body .container-fluid .content .content-header button {
   border-radius: 3px;
   cursor: pointer;
 }
-body .container-fluid .content .content-header button:hover, body .container-fluid .content .content-header button:focus, body .container-fluid .content .content-header button:active, body .container-fluid .content .content-header button:visited {
+body .container-fluid .orders-content .content-header button:hover, body .container-fluid .orders-content .content-header button:focus, body .container-fluid .orders-content .content-header button:active, body .container-fluid .orders-content .content-header button:visited {
   background-color: #569d03;
 }
-body .container-fluid .content .data-table {
+body .container-fluid .orders-content .data-table {
   margin-top: 2%;
   height: 390px;
   overflow-y: scroll;
@@ -475,32 +484,32 @@ body .container-fluid .content .data-table {
   margin-top: 3%;
 }
 @media (max-width : 1024px) {
-  body .container-fluid .content .data-table {
+  body .container-fluid .orders-content .data-table {
     height: 500px;
   }
 }
 @media (max-width : 768px) {
-  body .container-fluid .content .data-table {
+  body .container-fluid .orders-content .data-table {
     height: 450px;
   }
 }
 @media (max-width : 576px) {
-  body .container-fluid .content .data-table {
+  body .container-fluid .orders-content .data-table {
     margin-top: 8%;
     height: 76vh;
   }
 }
-body .container-fluid .content .data-table table {
+body .container-fluid .orders-content .data-table table {
   cursor: pointer;
 }
-body .container-fluid .content .data-table table .table-row:hover, body .container-fluid .content .data-table table .table-row:active, body .container-fluid .content .data-table table .table-row:focus, body .container-fluid .content .data-table table .table-row:visited {
+body .container-fluid .orders-content .data-table table .table-row:hover, body .container-fluid .orders-content .data-table table .table-row:active, body .container-fluid .orders-content .data-table table .table-row:focus, body .container-fluid .orders-content .data-table table .table-row:visited {
   color: white;
   background-color: #569d03;
 }
-body .container-fluid .content .data-table .collapse {
+body .container-fluid .orders-content .data-table .collapse {
   animation: all 1s ease-in-out;
 }
-body .container-fluid .content .data-table .row-description {
+body .container-fluid .orders-content .data-table .row-description {
   padding: 0px;
   text-align: right;
 }

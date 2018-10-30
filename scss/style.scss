@@ -141,6 +141,7 @@ body {
             display: none;
         }
         @media($small-max-width) {
+            position: inherit;
             display: block;
             outline: 0;
             border: 0;
@@ -425,13 +426,20 @@ body {
 //// Styling orders.html file \\\\
 body {
     .container-fluid {
-        .content {
+        .orders-content {
+            background-color: $background-color;
+            padding: 1%;
+            text-align: center;
+            height: 70vh;
+            justify-content: center;
+            margin-right: (100% / 12)*2;
+    
             @media($medium-max-width) {
                 margin-right: (100% / 12)*4;
             }
             @media($small-max-width) {
                 margin-right: 0;
-                height: 120vh;
+                height: 115vh;
             }    
             .content-header {
                 h5 {
