@@ -67,6 +67,13 @@ body {
                     }
                     .modal {
                         .modal-content {
+                            .modal-header {
+                                background-image: url(/images/menu-button-background.png);
+                                h5,
+                                span {
+                                    color: white;
+                                }
+                            }
                             .modal-body {
                                 .password-part {
                                     margin-bottom: 0;
@@ -78,6 +85,14 @@ body {
                             button {
                                 width: 25%;
                             }
+                            .confirm-login-btn {
+                                color: white;
+                                background-image: url(/images/menu-button-background.png);
+                            }
+                            .cancel-btn {
+                                color: white;
+                                background-image: url(/images/light-menu-button-background.png);
+                            }
                         }
                     }
                 }
@@ -85,6 +100,13 @@ body {
                     display: inline-block;
                     .signup-button {
                         @extend %user-button;
+                    }
+                    .modal-header {
+                        background-image: url(/images/menu-button-background.png);
+                        h5,
+                        span {
+                            color: white;
+                        }
                     }
                     .modal-body {
                         .form-check {
@@ -96,8 +118,36 @@ body {
                         button {
                             width: 25%;
                         }
+                        .confirm-signup-btn {
+                            color: white;
+                            background-image: url(/images/menu-button-background.png);
+                        }
+                        .cancel-btn {
+                            color: white;
+                            background-image: url(/images/light-menu-button-background.png);
+                        }
                     }
                 }
+            }
+        }
+    }
+    .side-menu-button {
+        @media($large-max-width) {
+            display: none;
+        }
+        @media($medium-max-width) {
+            display: none;
+        }
+        @media($small-max-width) {
+            display: block;
+            outline: 0;
+            border: 0;
+            width: 100%;
+            padding: 3%;
+            color: white;
+            background-image: url(/images/menu-button-background.png);
+            i {
+                padding: 2%;
             }
         }
     }
@@ -114,7 +164,7 @@ body {
             height: 68vh;
         }
         @media($small-max-width) {
-            height: 100vh;
+            display: none;
         }
         .list-group {
             color: $dark-color;
@@ -203,7 +253,6 @@ body {
         }
         @media($small-max-width) {
             margin-right: 0;
-            margin-top: 100vh;
             height: 95vh;
         }
         .banner {
@@ -278,7 +327,7 @@ body {
             @media($medium-max-width) {
                 height: 330px;
             }
-            @media($small-max-width){
+            @media($small-max-width) {
                 height: 50vh;
             }
             a {
@@ -320,9 +369,9 @@ body {
             padding-right: 35%;
             padding-top: 2%;
         }
-        @media($small-max-width){
-            top: 215vh;
-            padding-right: 5%;        
+        @media($small-max-width) {
+            top: 140vh;
+            padding-right: 5%;
         }
         div {
             display: inline-block;
@@ -331,9 +380,22 @@ body {
             h6 {
                 font-size: 15px !important;
             }
+            a {
+                color: white;
+            }
         }
         .group4 {
             text-align: left;
         }
     }
+}
+
+//// classes for side menu responsiveness \\\\
+.show-menu {
+    height: 100vh important;
+    display: block !important;
+    margin-top: 14%;
+    height: 100% !important;
+    position: absolute !important;
+    z-index: 1 !important;
 }
