@@ -370,6 +370,20 @@ body .content .news a p {
   color: #20351a;
   margin-bottom: 3px;
 }
+body .content .news .collapse .card .title span,
+body .content .news .collapse .card .title h5 {
+  display: inline-block;
+}
+body .content .news .collapse .card .title span {
+  color: #569d03;
+}
+body .content .news .collapse .card .title h5 {
+  color: #20351a;
+}
+body .content .news .collapse .card .title .share-links {
+  display: block;
+  float: left;
+}
 body footer {
   position: absolute;
   z-index: 1;
@@ -422,6 +436,73 @@ body footer .group4 {
   height: 100% !important;
   position: absolute !important;
   z-index: 1 !important;
+}
+
+@media (max-width : 768px) {
+  body .container-fluid .content {
+    margin-right: 33.3333333333%;
+  }
+}
+@media (max-width : 576px) {
+  body .container-fluid .content {
+    margin-right: 0;
+    height: 120vh;
+  }
+}
+body .container-fluid .content .content-header h5 {
+  color: #20351a;
+}
+body .container-fluid .content .content-header hr {
+  width: 10%;
+}
+body .container-fluid .content .content-header button {
+  border: 0;
+  outline: 0;
+  color: white;
+  background-color: #20351a;
+  padding: 0.5% 1%;
+  border-radius: 3px;
+  cursor: pointer;
+}
+body .container-fluid .content .content-header button:hover, body .container-fluid .content .content-header button:focus, body .container-fluid .content .content-header button:active, body .container-fluid .content .content-header button:visited {
+  background-color: #569d03;
+}
+body .container-fluid .content .data-table {
+  margin-top: 2%;
+  height: 390px;
+  overflow-y: scroll;
+  text-align: right;
+  margin-top: 3%;
+}
+@media (max-width : 1024px) {
+  body .container-fluid .content .data-table {
+    height: 500px;
+  }
+}
+@media (max-width : 768px) {
+  body .container-fluid .content .data-table {
+    height: 450px;
+  }
+}
+@media (max-width : 576px) {
+  body .container-fluid .content .data-table {
+    margin-top: 8%;
+    height: 76vh;
+  }
+}
+body .container-fluid .content .data-table table {
+  cursor: pointer;
+}
+body .container-fluid .content .data-table table .table-row:hover, body .container-fluid .content .data-table table .table-row:active, body .container-fluid .content .data-table table .table-row:focus, body .container-fluid .content .data-table table .table-row:visited {
+  color: white;
+  background-color: #569d03;
+}
+body .container-fluid .content .data-table .collapse {
+  animation: all 1s ease-in-out;
+}
+body .container-fluid .content .data-table .row-description {
+  padding: 0px;
+  text-align: right;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,6 +19,7 @@ $small-max-width: 'max-width : 576px';
     background-color: white;
 }
 
+//// Styling index.html file \\\\
 body {
     font-family: 'Cairo', 'Sans';
     nav {
@@ -349,6 +350,26 @@ body {
                     margin-bottom: 3px;
                 }
             }
+            .collapse {
+                .card {
+                    .title {
+                        span,
+                        h5 {
+                            display: inline-block;
+                        }
+                        span {
+                            color: $light-color;
+                        }
+                        h5 {
+                            color: $dark_color;
+                        }
+                        .share-links {
+                            display: block;
+                            float: left;
+                        }
+                    }
+                }
+            }
         }
     }
     footer {
@@ -399,4 +420,78 @@ body {
     height: 100% !important;
     position: absolute !important;
     z-index: 1 !important;
+}
+
+//// Styling orders.html file \\\\
+body {
+    .container-fluid {
+        .content {
+            @media($medium-max-width) {
+                margin-right: (100% / 12)*4;
+            }
+            @media($small-max-width) {
+                margin-right: 0;
+                height: 120vh;
+            }    
+            .content-header {
+                h5 {
+                    color: $dark_color;
+                }
+                hr {
+                    width: 10%;
+                }
+                button {
+                    border: 0;
+                    outline: 0;
+                    color: white;
+                    background-color: $dark-color;
+                    padding: .5% 1%;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    &:hover,
+                    &:focus,
+                    &:active,
+                    &:visited {
+                        background-color: $light-color;
+                    }
+                }
+            }
+            .data-table {
+                margin-top: 2%;
+                height: 390px;
+                overflow-y: scroll;
+                text-align: right;
+                margin-top: 3%;
+                @media($large-max-width) {
+                    height: 500px;
+                }
+                @media($medium-max-width) {
+                    height: 450px;
+                }
+                @media($small-max-width) {
+                    margin-top: 8%;
+                    height: 76vh;
+                }
+                table {
+                    cursor: pointer;
+                    .table-row {
+                        &:hover,
+                        &:active,
+                        &:focus,
+                        &:visited {
+                            color: white;
+                            background-color: $light_color;
+                        }
+                    }
+                }
+                .collapse {
+                    animation: all 1s ease-in-out;
+                }
+                .row-description {
+                    padding: 0px;
+                    text-align: right;
+                }
+            }
+        }
+    }
 }
