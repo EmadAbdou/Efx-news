@@ -12,6 +12,7 @@ $dark_color: #20351a;
 $large-max-width: 'max-width : 1024px';
 $medium-max-width: 'max-width : 768px';
 $small-max-width: 'max-width : 576px';
+$labtop-width: 'max-width : 1440px';
 //// Styling user buttons \\\\
 %user-button {
     width: 120px;
@@ -38,12 +39,18 @@ body {
                 margin: 0 !important;
                 text-align: center;
             }
+            @media($labtop-width) {
+                text-align: center;
+            }
             img {
                 @media($large-max-width) {
-                    width: 97%;
+                    width: 97% !important;
                 }
                 @media($small-max-width) {
-                    width: 40%;
+                    width: 40% !important;
+                }
+                @media($labtop-width) {
+                    width: 74%;
                 }
             }
         }
@@ -156,7 +163,7 @@ body {
     }
     .side-menu {
         background-image: url(/images/side_menu_background.png);
-        height: 77.5vh;
+        height: 77.4vh;
         padding: 0 !important;
         position: absolute;
         z-index: 2;
@@ -168,6 +175,9 @@ body {
         }
         @media($small-max-width) {
             display: none;
+        }
+        @media($labtop-width) {
+            height: 82.4vh;
         }
         .list-group {
             color: $dark-color;
@@ -220,10 +230,13 @@ body {
                 padding-top: 155%;
             }
             @media($medium-max-width) {
-                padding-top: 65%;
+                padding-top: 65% !important;
             }
             @media($small-max-width) {
-                margin-top: -60%;
+                margin-top: -60% !important;
+            }
+            @media($labtop-width) {
+                margin-top: -10%;
             }
             span {
                 text-decoration: none;
@@ -256,7 +269,8 @@ body {
         }
         @media($small-max-width) {
             margin-right: 0;
-            height: 95vh;
+            height: 115vh;
+            padding-top: 5%;
         }
         .banner {
             border-bottom: 2px solid $dark-color;
@@ -325,13 +339,16 @@ body {
             text-align: right;
             margin-top: 3%;
             @media($large-max-width) {
-                height: 395px;
+                height: 29vh !important;
             }
             @media($medium-max-width) {
-                height: 330px;
+                height: 330px !important;
             }
             @media($small-max-width) {
-                height: 50vh;
+                height: 50vh !important;
+            }
+            @media($labtop-width) {
+                height: 40vh;
             }
             a {
                 background-color: transparent;
@@ -393,7 +410,7 @@ body {
             padding-top: 2%;
         }
         @media($small-max-width) {
-            top: 140vh;
+            top: 143%;
             padding-right: 5%;
         }
         div {
@@ -433,14 +450,14 @@ body {
             height: 70vh;
             justify-content: center;
             margin-right: (100% / 12)*2;
-    
             @media($medium-max-width) {
                 margin-right: (100% / 12)*4;
             }
             @media($small-max-width) {
                 margin-right: 0;
                 height: 115vh;
-            }    
+                padding-top: 5%;
+            }
             .content-header {
                 h5 {
                     color: $dark_color;
@@ -480,6 +497,9 @@ body {
                     margin-top: 8%;
                     height: 76vh;
                 }
+                @media($labtop-width) {
+                    height: 45vh;
+                }
                 table {
                     cursor: pointer;
                     .table-row {
@@ -493,11 +513,74 @@ body {
                     }
                 }
                 .collapse {
-                    animation: all 1s ease-in-out;
+                    -webkit-transition: all 1s cubic-bezier(.27, .63, .75, .68);
+                    -o-transition: all 1s cubic-bezier(.27, .63, .75, .68);
+                    transition: all 1s cubic-bezier(.27, .63, .75, .68);
                 }
                 .row-description {
                     padding: 0px;
                     text-align: right;
+                }
+            }
+        }
+    }
+}
+
+//// styling questions.html file \\\\
+body {
+    .container-fluid {
+        .questions-content {
+            background-color: $background-color;
+            padding: 1%;
+            text-align: center;
+            height: 70vh;
+            justify-content: center;
+            margin-right: (100% / 12)*2;
+            @media($medium-max-width) {
+                margin-right: (100% / 12)*4;
+            }
+            @media($small-max-width) {
+                margin-right: 0;
+                height: 115vh;
+                padding-top: 5%;
+            }
+            .content-header {
+                h5 {
+                    color: $dark_color;
+                }
+                hr {
+                    width: 10%;
+                }
+            }
+            .questions {
+                text-align: right;
+                overflow-y: scroll;
+                height: 53.8vh;
+                padding: 1%;
+
+                @media($large-max-width) {
+                    height: 512px !important;
+                }
+                @media($medium-max-width) {
+                    height: 510px !important;
+                }
+                @media($small-max-width) {
+                    margin-top: 8%;
+                    height: 78vh !important;
+                }
+                @media($labtop-width) {
+                    padding-top: 1%;
+                    height: 53.5vh ;
+                }
+                .card {
+                    .card-header {
+                        background-image: url(/images/light-menu-button-background.png);
+                    }
+                }
+                button {
+                    border: none;
+                    outline: 0;
+                    color: white;
                 }
             }
         }
